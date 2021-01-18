@@ -13,6 +13,7 @@
         <module>ConfigServer</module>
         <module>Order</module>
         <module>Menu</module>
+        <module>Client</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

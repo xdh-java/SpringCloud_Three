@@ -13,5 +13,6 @@ public class Menu {
     private String name;
     private Double price;
     private String flavor;
+    private Type type;
 
 }

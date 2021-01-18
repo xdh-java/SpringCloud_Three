@@ -2,10 +2,22 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.java.xdh.repository.MenuRepository">
 
+    <resultMap id="menuMap" type="Menu">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"></result>
+        <result column="price" property="price"></result>
+        <result column="flavor" property="flavor"></result>
+        <!--映射根据查询出来的menuMap进行映射-->
+        <association property="type" select="com.java.xdh.repository.TypeRepository.findById" column="tid"></association>
+    </resultMap>
 
-    <select id="findAll" resultType="Menu">
+    <!--根据menuMap返回的数据来分页展示数据-->
+    <!--property里面的属性是你在配置类里面写的名称-->
+    <select id="findAll" resultMap="menuMap">
             select *from t_menu limit #{param1},#{param2}
     </select>
+
+
     <select id="count" resultType="int">
             select count(id) from t_menu
     </select>

@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Menu" />
         <module name="ConfigServer" />
+        <module name="Client" />
         <module name="EurekaServer" />
         <module name="Order" />
       </profile>
@@ -15,6 +16,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Client" options="-parameters" />
       <module name="ConfigServer" options="-parameters" />
       <module name="EurekaServer" options="-parameters" />
       <module name="Menu" options="-parameters" />
