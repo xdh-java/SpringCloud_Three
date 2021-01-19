@@ -9,7 +9,6 @@ import java.util.List;
  * @time 2021/1/17 0017 23:26
  * @description 这是我的代码风格
  */
-@Repository
 public interface MenuRepository {
 
     public List<Menu> findAll(int index,int limit);

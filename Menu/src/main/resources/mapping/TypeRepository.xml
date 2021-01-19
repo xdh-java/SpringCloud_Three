@@ -3,7 +3,10 @@
 <mapper namespace="com.java.xdh.repository.TypeRepository">
 
     <select id="findById" parameterType="long" resultType="Type">
-            select *from t_type where id = #{id}
+            select * from t_type where id = #{id}
+    </select>
+    <select id="findAllTypes" resultType="Type">
+            select * from t_type
     </select>
 
 </mapper>

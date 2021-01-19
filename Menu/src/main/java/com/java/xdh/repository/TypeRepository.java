@@ -1,6 +1,8 @@
 package com.java.xdh.repository;
 
-import java.lang.reflect.Type;
+import com.java.xdh.entity.Type;
+import org.springframework.stereotype.Repository;
+import java.util.List;
 
 /**
  * @author 薛登辉
@@ -9,4 +11,5 @@ import java.lang.reflect.Type;
  */
 public interface TypeRepository {
     public Type findById(long id);
+    public List<Type> findAllTypes();
 }
