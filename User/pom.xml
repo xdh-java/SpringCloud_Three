@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>Menu</artifactId>
+    <artifactId>User</artifactId>
     <dependencies>
         <!--成为注册中心的服务提供者-->
         <dependency>

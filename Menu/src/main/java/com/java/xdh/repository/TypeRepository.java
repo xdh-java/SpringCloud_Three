@@ -1,7 +1,5 @@
 package com.java.xdh.repository;
-
 import com.java.xdh.entity.Type;
-import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**

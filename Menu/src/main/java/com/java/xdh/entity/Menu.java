@@ -13,6 +13,7 @@ public class Menu {
     private String name;
     private Double price;
     private String flavor;
+    //封装了type属性
     private Type type;
 
 }

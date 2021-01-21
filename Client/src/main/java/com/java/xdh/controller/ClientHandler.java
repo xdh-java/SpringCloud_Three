@@ -3,15 +3,11 @@ package com.java.xdh.controller;
 import com.java.xdh.entity.Menu;
 import com.java.xdh.feign.MenuFeign;
 import com.java.xdh.vo.MenuVo;
-import javafx.scene.control.MenuItem;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-
-import java.util.List;
 
 /**
  * @author 薛登辉
@@ -26,12 +22,12 @@ public class ClientHandler {
     @Autowired
     private MenuFeign menuFeign;
 
-    @GetMapping("/findAll/{index}/{limit}")
+  /*  @GetMapping("/findAll/{index}/{limit}")
     @ResponseBody
     public MenuVo findAll(@PathVariable("index") int index,@PathVariable("limit") int limit){
         return menuFeign.findAll(index, limit);
     }
-
+*/
     @GetMapping("/redirect/{url}")
     public String index(@PathVariable("url") String url){
         return url;
@@ -48,7 +44,7 @@ public class ClientHandler {
     @GetMapping("/deleteById/{id}")
     public String deleteById(@PathVariable("id") int id){
         menuFeign.deleteById(id);
-        return "redirect:/client/redirect/index";
+        return "redirect:/client/redirect/menu_manage";
     }
     //添加的操作
     //跳转到添加的页面显示
@@ -64,7 +60,7 @@ public class ClientHandler {
     public String save(Menu menu){
         menuFeign.save(menu);
         System.out.println("md");
-        return "redirect:/client/redirect/index";
+        return "redirect:/client/redirect/menu_manage";
 
     }
     //更新的操作
@@ -79,7 +75,7 @@ public class ClientHandler {
     @PostMapping("/update")
     public String update(Menu menu){
         menuFeign.update(menu);
-        return "redirect:/client/redirect/index";
+        return "redirect:/client/redirect/menu_manage";
     }
 
 

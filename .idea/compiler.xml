@@ -6,22 +6,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Order" />
-        <module name="Menu" />
         <module name="ConfigServer" />
-        <module name="Client" />
+        <module name="User" />
+        <module name="Menu" />
+        <module name="Order" />
         <module name="EurekaServer" />
+        <module name="Account" />
+        <module name="Client" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Account" options="-parameters" />
       <module name="Client" options="-parameters" />
       <module name="ConfigServer" options="-parameters" />
       <module name="EurekaServer" options="-parameters" />
       <module name="Menu" options="-parameters" />
       <module name="Order" options="-parameters" />
       <module name="SpringCloud_OrderingSystem" options="-parameters" />
+      <module name="User" options="-parameters" />
     </option>
   </component>
 </project>

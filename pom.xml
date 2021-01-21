@@ -14,6 +14,8 @@
         <module>Order</module>
         <module>Menu</module>
         <module>Client</module>
+        <module>User</module>
+        <module>Account</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -31,6 +33,12 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        <!--SpringBoot-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <!--配置SpringCloud的依赖pom文件-->
     <dependencyManagement>
@@ -41,12 +49,6 @@
                 <version>Finchley.SR2</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-            <!--SpringBoot-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-test</artifactId>
-                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
